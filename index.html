@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To do de tareas</title>
+</head>
+<body>
+    <div class="list borde">
+        <div class="date">
+            <div class="dateLeft">
+                <div class="dateNumber"></div>
+                <div>
+                    <div class="dateMonth"></div>
+                    <div class="dateYear"></div>
+                </div>
+            </div>
+            <div class="dateText"></div>
+        </div>
+        <form id="form">
+            <input type="text" name="taskText" autocomplete="off" placeholder="Nueva tarea" class="borde">
+            <button type="submit" class="addTaskButton">+</button>
+            <button type="button" class="orderButton borde">Ordenar</button>
+        </form>
+        <div class="taskContainer"></div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
