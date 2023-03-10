@@ -12,7 +12,9 @@ body {
     color: var(--dark);
     font-size: 62.5%;
     font-family: 'Lato', sans-serif;
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 *:first-letter {
@@ -23,19 +25,29 @@ body {
     border-radius: 5px;
 }
 
-.list {
-    margin: 25px auto;
-    padding: 25px;
-    background-color: var(--light);
-    width: 100%;
-    max-width: 450px;
-    font-size: 1.6rem;
+.container {
+    width: 500px;
+    display: flex;
+    justify-content: center;
 }
+
+.container .list {
+    width: 100%;
+    background-color: var(--light);
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    
+}
+
 
 .date {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .dateLeft {
@@ -65,11 +77,11 @@ body {
 }
 
 form {
-    margin: 20px 0;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: repeat(auto 35px auto);
-    grid-column-gap: 15px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 input {
@@ -77,6 +89,7 @@ input {
     padding-left: 10px;
     background-color: var(--diabled);
     font-size: 1.4rem;
+    width: 100%;
 }
 
 input:focus {
@@ -98,12 +111,21 @@ input:focus {
 }
 
 .orderButton {
+    width: auto;
     background-color: var(--secondary);
     color: var(--light);
     font-size: 1.4rem;
 }
 
+.taskContainer {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .task {
+    width: auto;
     background-color: var(--primary);
     padding: 15px;
     margin-top: 15px;
@@ -116,4 +138,10 @@ input:focus {
     background-color: var(--diabled);
     text-decoration: line-through;
     color: var(--dark);
+}
+@media (max-width: 510px) {
+    .container {
+        width: 100%;
+        height: auto;
+    }
 }
